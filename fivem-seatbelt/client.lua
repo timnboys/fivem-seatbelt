@@ -51,6 +51,8 @@ Citizen.CreateThread(function()
 				
 			if IsControlJustReleased(0, 311) then
 				beltOn = not beltOn				  
+				if beltOn then TriggerServerEvent('broadcast_seatbeltstate', beltOn)
+				else TriggerServerEvent('broadcast_seatbeltstate', beltOn) end
 				if beltOn then TriggerEvent('chatMessage', Cfg.Strings.belt_on)
 				else TriggerEvent('chatMessage', Cfg.Strings.belt_off) end 
 			end
@@ -63,6 +65,3 @@ Citizen.CreateThread(function()
 		Citizen.Wait(0)
 	end
 end)
-function getSeatBeltStatus()
-    return beltOn
-end
