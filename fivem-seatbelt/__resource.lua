@@ -5,6 +5,9 @@ client_scripts {
     'config.lua',
     'client.lua'
 }
-exports {
+server_scripts {
+	"server.lua"
+}
+server_export {
     'getSeatBeltStatus'
 }
