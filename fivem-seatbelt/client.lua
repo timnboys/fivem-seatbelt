@@ -63,3 +63,6 @@ Citizen.CreateThread(function()
 		Citizen.Wait(0)
 	end
 end)
+function getSeatBeltStatus()
+    return beltOn
+end
