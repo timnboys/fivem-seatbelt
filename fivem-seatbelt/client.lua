@@ -49,7 +49,7 @@ Citizen.CreateThread(function()
 			velBuffer[2] = velBuffer[1]
 			velBuffer[1] = GetEntityVelocity(car)
 				
-			if IsControlJustReleased(0, 311) then
+			if IsControlJustReleased(0, 20) then
 				beltOn = not beltOn				  
 				if beltOn then TriggerServerEvent('broadcast_seatbeltstate', beltOn)
 				else TriggerServerEvent('broadcast_seatbeltstate', beltOn) end
