@@ -48,7 +48,7 @@ Citizen.CreateThread(function()
 				
 			velBuffer[2] = velBuffer[1]
 			velBuffer[1] = GetEntityVelocity(car)
-				
+			--20 is Z or DPad Down = https://wiki.fivem.net/wiki/Controls
 			if IsControlJustReleased(0, 20) then
 				beltOn = not beltOn				  
 				if beltOn then TriggerServerEvent('broadcast_seatbeltstate', beltOn)
